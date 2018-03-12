@@ -1,16 +1,22 @@
 <template>
-  <b-tabs>
-    <b-tab title="1: Санаторій Україна - Аврора" active>
-      <b-table responsive :items="items"></b-table>
-    </b-tab>
-    <b-tab title="1A: Вулиця Пацаєва - Санаторій Україна">
-    </b-tab>
-  </b-tabs>
+  <div>
+    <b-tabs>
+      <b-tab title="1: Санаторій Україна - Аврора" active>
+        <b-table responsive :items="items"></b-table>
+      </b-tab>
+      <b-tab title="1A: Вулиця Пацаєва - Санаторій Україна">
+      </b-tab>
+    </b-tabs>
+    <!--TODO: remove it after using items2 for table-->
+    <div> {{items2}}} </div>
+  </div>
 </template>
 
 <script>
+import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
+
 export default {
-  data () {
+  data() {
     return {
       items: [
         {
@@ -71,7 +77,17 @@ export default {
           'Лісгосп': '12:00',
           'санаторій Україна': '12:05'
         }
-      ]
+      ],
+      items2: [] //TODO: replace items into items2 and rename items2 to items
+    }
+  },
+  mounted() {
+    this.getTroleybusSchedules()
+  },
+  methods: {
+    async getTroleybusSchedules() {
+      const response = await TroleybusSchedulesService.fetchTroleybusSchedules()
+      this.items2 = response.data
     }
   }
 }
