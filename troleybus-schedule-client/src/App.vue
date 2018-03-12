@@ -1,8 +1,13 @@
 <template>
-	<schedule-table></schedule-table>
+  <div id="app">
+    <router-view/>
+  </div>
 </template>
 
 <script>
+export default {
+  name: 'App'
+}
 </script>
 
 <style>
