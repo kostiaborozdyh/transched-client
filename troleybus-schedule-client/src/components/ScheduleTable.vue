@@ -15,9 +15,9 @@
 <script>
 import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
 
-export default {
-  data() {
-    return {
+      export default {
+        data() {
+          return {
       items: [
         {
           'Напрямок': 'ЧЛФЗ "Аврора" - сан.Україна',
