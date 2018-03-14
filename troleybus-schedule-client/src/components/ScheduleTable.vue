@@ -16,7 +16,7 @@
 import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
 
 export default {
-  data() {
+  data () {
     return {
       items: [
         {
@@ -78,14 +78,14 @@ export default {
           'санаторій Україна': '12:05'
         }
       ],
-      items2: [] //TODO: replace items into items2 and rename items2 to items
+      items2: [] // TODO: replace items into items2 and rename items2 to items
     }
   },
-  mounted() {
+  mounted () {
     this.getTroleybusSchedules()
   },
   methods: {
-    async getTroleybusSchedules() {
+    async getTroleybusSchedules () {
       const response = await TroleybusSchedulesService.fetchTroleybusSchedules()
       this.items2 = response.data
     }

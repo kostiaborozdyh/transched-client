@@ -8,10 +8,12 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import ScheduleTable from '@/components/ScheduleTable'
+import ScheduleButtons from '@/components/ScheduleButtons'
 
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
 Vue.component('schedule-table', ScheduleTable);
+Vue.component('buttons-service', ScheduleButtons);
 
 new Vue({
   el: '#app',
