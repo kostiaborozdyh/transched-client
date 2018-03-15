@@ -15,6 +15,7 @@
 <script>
 import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
 
+
 export default {
   data () {
     return {
