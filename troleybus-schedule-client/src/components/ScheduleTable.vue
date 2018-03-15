@@ -15,9 +15,10 @@
 <script>
 import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
 
-      export default {
-        data() {
-          return {
+
+export default {
+  data () {
+    return {
       items: [
         {
           'Напрямок': 'ЧЛФЗ "Аврора" - сан.Україна',
@@ -43,7 +44,7 @@ import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
           'Агропроммеханізація': '11:35',
           'Міська лікарня №1': '11:40',
           'Обласна лікарня': '11:45',
-          'м/н Соснівка': '11:50',
+          'м/н Сосновка': '11:50',
           'Міська лікарня №2': '11:55',
           'Лісгосп': '12:00',
           'санаторій Україна': '12:05'
@@ -72,20 +73,20 @@ import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
           'Агропроммеханізація': '11:35',
           'Міська лікарня №1': '11:40',
           'Обласна лікарня': '11:45',
-          'м/н Соснівка': '11:50',
+          'м/н Сосновка': '11:50',
           'Міська лікарня №2': '11:55',
           'Лісгосп': '12:00',
           'санаторій Україна': '12:05'
         }
       ],
-      items2: [] //TODO: replace items into items2 and rename items2 to items
+      items2: [] // TODO: replace items into items2 and rename items2 to items
     }
   },
-  mounted() {
+  mounted () {
     this.getTroleybusSchedules()
   },
   methods: {
-    async getTroleybusSchedules() {
+    async getTroleybusSchedules () {
       const response = await TroleybusSchedulesService.fetchTroleybusSchedules()
       this.items2 = response.data
     }
