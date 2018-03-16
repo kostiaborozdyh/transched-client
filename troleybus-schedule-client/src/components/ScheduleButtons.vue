@@ -1,12 +1,12 @@
-<!--suppress ALL -->
+
 <template>
   <div id="app">
     <div>
       <div class="buttons">
-    <b-button variant="primary">Додати файл</b-button>
+        <b-button variant="primary">Додати файл</b-button>
       </div>
       <div class="text">
-      <font-awesome-icon :icon="icon"  />Розклад руху тролейбусів.xlsx
+        <font-awesome-icon :icon="icon"  />Розклад руху тролейбусів.xlsx
       </div>
       <div class="button1">
         <b-button disabled variant="success">Імпортувати</b-button>
@@ -42,8 +42,8 @@ export default {
   export default {
     data () {
       return {
+        max:100,
         value: 75,
-        max:100
       }
     }
   }
