@@ -1,6 +1,6 @@
 
 <template>
-  <div id="app">
+  <div>
     <div>
       <div class="buttons">
         <b-button variant="primary">Додати файл</b-button>
@@ -43,7 +43,7 @@ export default {
     data () {
       return {
         max:100,
-        value: 75,
+        value: 75
       }
     }
   }
@@ -54,9 +54,9 @@ export default {
     visibility: visible;
   }
   .buttons{
-   padding-top:10px;
+    padding-top:10px;
   }
-  .button{
+  .button1{
     margin-lefit:10px;
     margin-down:10px;
   }
@@ -69,5 +69,4 @@ export default {
     visibility: visible;
 
   }
-
 </style>
