@@ -1,34 +1,73 @@
+<!--suppress ALL -->
 <template>
-  <div>
-<div class="file">
-  <div style="color:green">
-    <i class="far fa-file-excel fa-lg"> Розклад руху тролейбусів.xlsx</i>
-  </div>
-</div>
-<div class="buttons">
-  <b-button variant="success">Імпортувати</b-button>
-  <b-button variant="danger">Видалити файл</b-button>
-</div>
+  <div id="app">
+    <div>
+      <div class="buttons">
+    <b-button variant="primary">Додати файл</b-button>
+      </div>
+      <div class="text">
+      <font-awesome-icon :icon="icon"  />Розклад руху тролейбусів.xlsx
+      </div>
+      <div class="button1">
+        <b-button disabled variant="success">Імпортувати</b-button>
+        <b-button disabled variant="danger">Видалити</b-button>
+      </div>
+      <div class="progress">
+        <b-progress :value="value" class="w-25"></b-progress>
+      </div>
+    </div>
+    <div class="alert">
+      <b-alert variant="success" show dismissible  >Файл заїмпортовано вдало. 300 нових записів для 15 маршрутів додано.</b-alert>
+    </div>
   </div>
 </template>
 <script>
-import ButtonsService from '@/services/ButtonsService'
-
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import { faFile } from '@fortawesome/fontawesome-free-solid'
 export default {
-  data () {
-    return {
+  name: 'FAExample',
 
-      mounted () {
-        this.getButtonsSchedules()
-      },
-      methods: {
-        async getButtonsSchedules () {
-          const response = await ButtonsService.fetchTroleybusSchedules()
-          this.items2 = response.data
-        }
+  computed: {
+    icon () {
+      return faFile
+    }
+  },
+
+  components: {
+    FontAwesomeIcon
+  }
+}
+</script>
+<script>
+  export default {
+    data () {
+      return {
+        value: 75,
+        max:100
       }
     }
   }
-}
-
 </script>
+<style>
+  .alert { visibility: hidden; }
+  .b:hover + .alert {
+    visibility: visible;
+  }
+  .buttons{
+   padding-top:10px;
+  }
+  .button{
+    margin-lefit:10px;
+    margin-down:10px;
+  }
+  .text { visibility: hidden; }
+  .b:hover + .text {
+    visibility: visible;
+  }
+  .progress{ visibility: hidden; }
+  .b:hover + .text {
+    visibility: visible;
+
+  }
+
+</style>

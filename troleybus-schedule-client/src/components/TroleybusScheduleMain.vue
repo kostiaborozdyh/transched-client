@@ -1,10 +1,8 @@
 <template>
-  <buttons-service>
-  </buttons-service>
-</template>
-<template>
-  <schedule-table>
-  </schedule-table>
+  <div>
+  <buttons-service />
+  <schedule-table />
+  </div>
 </template>
 
 <script>
@@ -15,4 +13,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .buttons
+  padding-right: 10px;
 </style>
