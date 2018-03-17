@@ -1,5 +1,8 @@
 <template>
+  <div>
+  <buttons-service />
   <schedule-table />
+  </div>
 </template>
 
 <script>
