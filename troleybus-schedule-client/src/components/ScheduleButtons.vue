@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <div>
@@ -33,20 +32,17 @@ export default {
     }
   },
 
+  data () {
+    return {
+      max: 100,
+      value: 75
+    }
+  },
+
   components: {
     FontAwesomeIcon
   }
 }
-</script>
-<script>
-  export default {
-    data () {
-      return {
-        max:100,
-        value: 75
-      }
-    }
-  }
 </script>
 <style>
   .alert { visibility: hidden; }
