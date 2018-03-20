@@ -1,14 +1,14 @@
 <template>
   <div>
-  <buttons-service />
-  <schedule-table />
+    <schedule-buttons/>
+    <schedule-table/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'TroleybusScheduleMain'
-}
+  export default {
+    name: 'TroleybusScheduleMain'
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
