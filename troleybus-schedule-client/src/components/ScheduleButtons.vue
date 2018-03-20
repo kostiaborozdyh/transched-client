@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <div>
@@ -32,6 +31,13 @@ export default {
       return faFile
     }
   },
+  data () {
+    return {
+      max: 100,
+      value: 75
+    }
+  },
+
   data () {
     return {
       max: 100,
