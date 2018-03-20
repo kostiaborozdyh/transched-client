@@ -1,8 +1,8 @@
 <template>
   <div>
   <buttons-service />
-  <schedule-table />
     <AdminButtons />
+  <schedule-table />
   </div>
 </template>
 
