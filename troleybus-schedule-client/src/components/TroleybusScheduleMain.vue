@@ -2,6 +2,7 @@
   <div>
   <buttons-service />
   <schedule-table />
+    <AdminButtons />
   </div>
 </template>
 

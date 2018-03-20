@@ -1,20 +1,18 @@
 <template>
   <div>
-    <div>
-      <div class="buttons">
-        <b-button variant="primary">Додати файл</b-button>
-      </div>
-      <div class="text">
-        <font-awesome-icon :icon="icon"  />Розклад руху тролейбусів.xlsx
-      </div>
-      <div class="button1">
-        <b-button disabled variant="success">Імпортувати</b-button>
-        <b-button disabled variant="danger">Видалити</b-button>
-      </div>
-      <div class="progress">
+    <div class="buttons">
+      <b-button variant="primary">Додати файл</b-button>
+    </div>
+    <div class="text">
+      <font-awesome-icon :icon="icon"  />Розклад руху тролейбусів.xlsx
+    </div>
+    <div class="button1">
+      <b-button disabled variant="success">Імпортувати</b-button>
+      <b-button disabled variant="danger">Видалити</b-button>
+    </div>
+         <div class="progress">
         <b-progress :value="value" class="w-25"></b-progress>
       </div>
-    </div>
     <div class="alert">
       <b-alert variant="success" show dismissible  >Файл заїмпортовано вдало. 300 нових записів для 15 маршрутів додано.</b-alert>
     </div>
@@ -31,13 +29,6 @@ export default {
       return faFile
     }
   },
-  data () {
-    return {
-      max: 100,
-      value: 75
-    }
-  },
-
   data () {
     return {
       max: 100,

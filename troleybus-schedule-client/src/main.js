@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import ScheduleTable from '@/components/ScheduleTable'
 import ScheduleButtons from '@/components/ScheduleButtons'
+import ScheduleButtonsAdmin from '@/components/SchedulebuttonsAdmin'
 import fontawesome from '@fortawesome/fontawesome'
 import brands from '@fortawesome/fontawesome-free-brands'
 import { faCoffee } from '@fortawesome/fontawesome-free-solid'
@@ -17,6 +18,7 @@ Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
 Vue.component('schedule-table', ScheduleTable);
 Vue.component('buttons-service', ScheduleButtons);
+Vue.component('AdminButtons', ScheduleButtonsAdmin);
 
 fontawesome.library.add(brands, faCoffee)
 
