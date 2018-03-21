@@ -1,7 +1,7 @@
 <template>
-  <div class="m-5 p-5">
-    <div class="row">
-      <div class="col text-right">
+  <div>
+    <div>
+      <div>
         <b-button variant="primary">Додати файл</b-button>
       </div>
     </div>
@@ -15,18 +15,22 @@
         <b-button disabled variant="danger">Видалити</b-button>
       </div>
     </div>
+    <div class="progress">
     <div class="row mt-3">
       <div class="col">
         <b-progress :value="value"></b-progress>
       </div>
     </div>
+    </div>
+    <div class="alert">
     <div class="row mt-3">
       <div class="col">
         <b-alert variant="success" show dismissible>Файл заїмпортовано вдало. 300 нових записів для 15 маршрутів додано.
         </b-alert>
       </div>
+      </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -45,4 +49,16 @@
   }
 </script>
 <style>
+  .col-md-auto{ visibility: hidden; }
+  .b:hover + .cold-mt-auto {
+    visibility: visible;
+  }
+  .row-mt-3 { visibility: hidden; }
+  .b:hover + .progress {
+    visibility: visible;
+  }
+  .alert { visibility: hidden; }
+  .b:hover + .alert {
+    visibility: visible;
+  }
 </style>
