@@ -1,6 +1,6 @@
 <template>
   <div>
-    <schedule-buttons/>
+    <admin-buttons />
     <schedule-table/>
   </div>
 </template>
