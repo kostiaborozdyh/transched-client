@@ -15,14 +15,12 @@ import '@fortawesome/fontawesome-free-brands'
 import '@fortawesome/fontawesome-free-regular'
 
 import ScheduleTable from '@/components/ScheduleTable'
-import ScheduleButtons from '@/components/ScheduleButtons'
 import ScheduleButtonsAdmin from '@/components/ScheduleButtonsAdmin'
 
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 Vue.component('schedule-table', ScheduleTable)
-Vue.component('schedule-buttons', ScheduleButtons)
-Vue.component('AdminButtons', ScheduleButtonsAdmin)
+Vue.component('admin-buttons', ScheduleButtonsAdmin)
 
 new Vue({
   el: '#app',
