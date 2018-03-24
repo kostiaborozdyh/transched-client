@@ -18,12 +18,12 @@
     style="width:100%;  height: 400px;"
   >
     <gmap-marker
-      :key="index"
-      v-for="(m, index) in markers"
-      :position="m.position"
-      @click="center=m.position"
-    ></gmap-marker>
-  </gmap-map>
+        :key="index"
+        v-for="(m, index) in markers"
+        :position="m.position"
+        @click="center=m.position"
+      ></gmap-marker>
+        </gmap-map>
       </b-tab>
       <b-tab title="1A: Вулиця Пацаєва - Санаторій Україна">
       </b-tab>
