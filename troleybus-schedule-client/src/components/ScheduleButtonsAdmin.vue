@@ -62,4 +62,10 @@
   }
 </script>
 <style>
+  .button{
+    margin-left: 1000px;
+  }
+  .input{
+    margin-left: 960px;
+  }
 </style>
