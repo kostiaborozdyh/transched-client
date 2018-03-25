@@ -8,29 +8,29 @@
       </b-tab>
     </b-tabs>
     <!--TODO: remove it after using items2 for table-->
-    <div> {{items}} </div>
+    <div> {{items}}</div>
   </div>
 </template>
 
 <script>
-import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
+  import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
 
-export default {
-  data () {
-    return {
-      items: []
-    }
-  },
-  mounted () {
-    this.getTroleybusSchedules()
-  },
-  methods: {
-    async getTroleybusSchedules () {
-      const response = await TroleybusSchedulesService.fetchTroleybusSchedules();
-      this.items = response.data
+  export default {
+    data () {
+      return {
+        items: []
+      }
+    },
+    mounted () {
+      this.getTroleybusSchedules()
+    },
+    methods: {
+      async getTroleybusSchedules() {
+        const response = await TroleybusSchedulesService.fetchTroleybusSchedules()
+        this.items = response.data
+      }
     }
   }
-}
 </script>
 
 <style>
