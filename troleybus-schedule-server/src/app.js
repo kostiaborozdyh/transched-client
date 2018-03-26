@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('stop/index', (req, res) => {
-    req.send([
+    res.send([
         {id: '5ab878b63fc038833137a051', title: 'ЧЛФЗ "Аврора"'},
         {id: '5ab878b6852bf09243009759', title: 'завод "Хімреактив"'},
         {id: '5ab878b6df3ed2cb2365e4b5', title: 'ДОК'},
