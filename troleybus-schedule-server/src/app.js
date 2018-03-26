@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/stop/index', (req, res) => {
+app.get('stop/index', (req, res) => {
     req.send([
         {id: '5ab878b63fc038833137a051', title: 'ЧЛФЗ "Аврора"'},
         {id: '5ab878b6852bf09243009759', title: 'завод "Хімреактив"'},
@@ -44,7 +44,7 @@ app.get('/stop/index', (req, res) => {
     ])
 });
 
-app.get('/troleybus_schedules', (req, res) => {
+app.get('troleybusschedule/index', (req, res) => {
     res.send(
         [
             {
