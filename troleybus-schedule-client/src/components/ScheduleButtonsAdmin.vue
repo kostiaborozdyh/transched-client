@@ -5,14 +5,30 @@
       <h5><input name="number" type="radio" value="number"> 2018-03-11<font-awesome-icon :icon="['fas', 'file-excel']" class="text-success"/> Файл_розкладу_10_02_2018.xlsx<b-badge pill variant="secondary">15</b-badge> маршрутів <b-badge variant="success">Діючий</b-badge><a href="#"><font-awesome-icon :icon="['fas', 'trash']" class="text-danger" /></a><input type="text" size="40"></h5>
       <h5><input name="number" type="radio" value="number" > 2018-02-10 <font-awesome-icon :icon="['fas', 'file-excel']" class="text-success"/> Файл_розкладу_10_01_2018.xlsx<b-badge pill variant="secondary">15</b-badge> маршрутів <b-badge variant="secondary">Минулий</b-badge><a href="#"><font-awesome-icon :icon="['fas', 'trash']" class="text-danger" /> </a></h5>
     </div>
+    <div>{{items}}</div>
   </div>
 </template>
 <script>
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-  export default {
+  import ImportsInfoService from '@/services/ImportsInfoSercice'
 
+  export default {
+    data () {
+      return {
+        items: []
+      }
+    },
     components: {
       FontAwesomeIcon
+    },
+    mounted () {
+      this.getImportsInfo()
+    },
+    methods: {
+      async getImportsInfo () {
+        const response = await ImportsInfoService.fetchImportsInfo()
+        this.items = response.data
+      }
     }
   }
 </script>

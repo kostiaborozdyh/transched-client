@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('stop/index', (req, res) => {
+app.get('/stop/index', (req, res) => {
     res.send([
         {id: '5ab878b63fc038833137a051', title: 'ЧЛФЗ "Аврора"'},
         {id: '5ab878b6852bf09243009759', title: 'завод "Хімреактив"'},
@@ -44,7 +44,7 @@ app.get('stop/index', (req, res) => {
     ])
 });
 
-app.get('troleybusschedule/index', (req, res) => {
+app.get('/troleybusschedule/index', (req, res) => {
     res.send(
         [
             {
@@ -116,6 +116,14 @@ app.get('troleybusschedule/index', (req, res) => {
                 ]
             }]
     )
+});
+
+app.get('/import/index', (req, res) => {
+   res.send([
+       { version: '2018-02-23', filename: 'розклад_2018_02.xlsx', routes_count: 15, state: 'draft' },
+       { version: '2018-02-15', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'active' },
+       { version: '2018-02-02', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'past' }
+   ])
 });
 
 app.listen(process.env.PORT || 8081);
