@@ -120,9 +120,9 @@ app.get('/troleybusschedule/index', (req, res) => {
 
 app.get('/import/index', (req, res) => {
     res.send([
-        {version: '2018-02-23', filename: 'розклад_2018_02.xlsx', routes_count: 15, state: 'draft'},
-        {version: '2018-02-15', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'active'},
-        {version: '2018-02-02', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'past'}
+        {id: '5ab878b63fc038833137a051', version: '2018-02-23', filename: 'розклад_2018_02.xlsx', routes_count: 15, state: 'draft'},
+        {id: '5ab878b6852bf09243009759', version: '2018-02-15', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'active'},
+        {id: '5ab878b6df3ed2cb2365e4b5', version: '2018-02-02', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'past'}
     ])
 });
 
