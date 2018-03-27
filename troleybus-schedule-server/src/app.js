@@ -120,15 +120,10 @@ app.get('/troleybusschedule/index', (req, res) => {
 
 app.get('/import/index', (req, res) => {
     res.send([
-        { version: '2018-02-23', filename: 'розклад_2018_02.xlsx', routes_count: 15, state: 'draft' },
-        { version: '2018-02-15', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'active' },
-        { version: '2018-02-02', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'past' }
+        {version: '2018-02-23', filename: 'розклад_2018_02.xlsx', routes_count: 15, state: 'draft'},
+        {version: '2018-02-15', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'active'},
+        {version: '2018-02-02', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'past'}
     ])
-   res.send([
-       { version: '2018-02-23', filename: 'розклад_2018_02.xlsx', routes_count: 15, state: 'draft' },
-       { version: '2018-02-15', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'active' },
-       { version: '2018-02-02', filename: 'розклад_2018_02.xlsx', routes_count: 12, state: 'past' }
-   ])
 });
 
 app.listen(process.env.PORT || 8081);
