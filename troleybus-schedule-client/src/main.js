@@ -18,6 +18,7 @@ import * as VueGoogleMaps from 'vue2-google-maps';
 
 import ScheduleTable from '@/components/ScheduleTable'
 import ScheduleButtonsAdmin from '@/components/ScheduleButtonsAdmin'
+import GoogleMap from '@/components/ScheduleGoogleMap'
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -30,6 +31,7 @@ Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 Vue.component('schedule-table', ScheduleTable)
 Vue.component('admin-buttons', ScheduleButtonsAdmin)
+Vue.component('google-map', GoogleMap)
 
 new Vue({
   el: '#app',

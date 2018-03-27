@@ -1,19 +1,28 @@
 <template>
   <div>
-    <b-tabs>
-      <b-tab title="1: Санаторій Україна - Аврора" active>
-        <b-table responsive :items="items"></b-table>
-      </b-tab>
-      <b-tab title="1A: Вулиця Пацаєва - Санаторій Україна">
-      </b-tab>
-    </b-tabs>
-    <div>{{items}}</div>
+    <div class="map">
+    <label>
+    <gmap-autocomplete
+      @place_changed="setPlace">
+    </gmap-autocomplete>
+    <button @click="addMarker">Add</button>
+    </label>
+    <gmap-map
+      :center="center"
+      :zoom="12"
+      style="width:100%;  height: 400px;"
+    >
+      <gmap-marker
+        :key="index"
+        v-for="(m, index) in markers"
+        :position="m.position"
+        @click="center=m.position"
+      ></gmap-marker>
+    </gmap-map>
+</div>
   </div>
 </template>
-
 <script>
-  import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
-
   export default {
     data () {
       return {
@@ -28,7 +37,6 @@
     },
     mounted () {
       this.geolocate()
-      this.getTroleybusSchedules()
     },
     methods: {
       setPlace (place) {
@@ -50,21 +58,15 @@
         navigator.geolocation.getCurrentPosition(position => {
           this.center = {
             lat: position.coords.latitude,
-            lng: position.coords.longitude,
-
-            async getTroleybusSchedules () {
-              const response = await TroleybusSchedulesService.fetchTroleybusSchedules()
-              this.items = response.data
-            }
+            lng: position.coords.longitude
           }
         })
       }
     }
   }
 </script>
-
 <style>
-  .nav {
-    margin-top: 30px;
+  .map{
+    .margin-left: 1000px;
   }
 </style>
