@@ -7,7 +7,7 @@
 
 <script>
   export default {
-    name: 'TroleybusScheduleMain'
+    name: 'TsAdmin'
   }
 </script>
 <style scoped>

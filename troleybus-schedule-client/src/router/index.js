@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TroleybusScheduleMain from '@/components/TroleybusScheduleMain'
+import TsAdmin from '@/components/TsAdmin'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'TroleybusScheduleMain',
-      component: TroleybusScheduleMain
+      name: 'TsAdmin',
+      component: TsAdmin
     }
   ]
 })

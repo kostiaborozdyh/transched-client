@@ -1,25 +1,25 @@
 <template>
   <div>
     <div class="map">
-    <label>
-    <gmap-autocomplete
-      @place_changed="setPlace">
-    </gmap-autocomplete>
-    <button @click="addMarker">Add</button>
-    </label>
-    <gmap-map
-      :center="center"
-      :zoom="12"
-      style="width:100%;  height: 400px;"
-    >
-      <gmap-marker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
-        @click="center=m.position"
-      ></gmap-marker>
-    </gmap-map>
-</div>
+      <label>
+        <gmap-autocomplete
+          @place_changed="setPlace">
+        </gmap-autocomplete>
+        <button @click="addMarker">Add</button>
+      </label>
+      <gmap-map
+        :center="center"
+        :zoom="12"
+        style="width:100%;  height: 400px;"
+      >
+        <gmap-marker
+          :key="index"
+          v-for="(m, index) in markers"
+          :position="m.position"
+          @click="center=m.position"
+        ></gmap-marker>
+      </gmap-map>
+    </div>
   </div>
 </template>
 
@@ -67,7 +67,7 @@
   }
 </script>
 <style>
-  .map{
-    .margin-left: 1000px;
+  .map {
+    margin-left: 1000px;
   }
 </style>
