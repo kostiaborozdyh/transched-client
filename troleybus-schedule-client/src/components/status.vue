@@ -9,7 +9,6 @@
         <span><b-badge pill variant="secondary">{{item.routes_count}}</b-badge></span>
         <span>маршрутів</span>
       </div>
-      <status />
       <div class="col-3 text-right">
         <a href="#">
           <font-awesome-icon :icon="['fas', 'trash']" class="text-danger"/>
