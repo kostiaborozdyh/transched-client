@@ -10,12 +10,16 @@
   </div>
 </template>
 <script>
+  import TsImportedItem from '@/components/TsImportedItem'
   import ImportsInfoService from '@/services/ImportsInfoSercice'
   export default {
     data () {
       return {
         items: []
       }
+    },
+    components: {
+      TsImportedItem
     },
     mounted () {
       this.getImportsInfo()

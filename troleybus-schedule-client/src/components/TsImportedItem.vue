@@ -39,6 +39,7 @@
         const response = await ImportsInfoService.fetchImportsInfo()
         this.items = response.data
       }
-    }
+    },
+    props: ['item']
   }
 </script>
