@@ -1,6 +1,5 @@
 <template>
   <div class="row">
-    <div class="row" v-for="item in items" :key="item.id">
       <div class="col-2">2018-03-17</div>
       <div class="col-4">
         <font-awesome-icon :icon="['fas', 'file-excel']" class="text-success"/>
@@ -20,7 +19,6 @@
         </a>
       </div>
     </div>
-  </div>
 </template>
 <script>
   export default{}
