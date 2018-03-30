@@ -21,8 +21,10 @@
 </template>
 <script>
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-  import ImportsInfoService from '@/services/ImportsInfoSercice'
   export default {
-    props: ['item']
+    props: ['item'],
+    components: {
+      FontAwesomeIcon
+    }
   }
 </script>

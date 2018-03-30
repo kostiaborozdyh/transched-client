@@ -6,6 +6,7 @@
           <b-button variant="primary">Імпортувати файл</b-button>
         </div>
       </div>
+      <imported-item v-for="item in items" v-bind:key="item.id" v-bind:item="item"></imported-item>
     </div>
   </div>
 </template>
