@@ -13,7 +13,7 @@
           <span>{{item.filename}}</span>
         </div>
         <div class="col-3">
-          <b-badge pill variant="secondary">15</b-badge>
+          <span><b-badge pill variant="secondary">{{item.routes_count}}</b-badge></span>
           <span>маршрутів</span>
         </div>
         <div class="col-3 text-right">
@@ -30,9 +30,10 @@
   </div>
 </template>
 <script>
+
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   import ImportsInfoService from '@/services/ImportsInfoSercice'
-
+  import status from '@/components/status'
   export default {
     data () {
       return {
