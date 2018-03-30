@@ -19,7 +19,7 @@
       }
     },
     components: {
-      TsImportedItem
+      'imported-item': TsImportedItem
     },
     mounted () {
       this.getImportsInfo()
