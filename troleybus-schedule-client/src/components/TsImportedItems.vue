@@ -6,7 +6,6 @@
           <b-button variant="primary">Імпортувати файл</b-button>
         </div>
       </div>
-      <div class="row" v-for="item in items" :key="item.id">
         <div class="col-2">2018-03-17</div>
         <div class="col-4">
           <font-awesome-icon :icon="['fas', 'file-excel']" class="text-success"/>
@@ -27,7 +26,6 @@
       </div>
     </div>
     <div>{{items}}</div>
-  </div>
 </template>
 <script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="row">
     <div class="row" v-for="item in items" :key="item.id">
       <div class="col-2">2018-03-17</div>
       <div class="col-4">
