@@ -20,9 +20,6 @@
         items: []
       }
     },
-    components: {
-      FontAwesomeIcon
-    },
     mounted () {
       this.getImportsInfo()
     },
