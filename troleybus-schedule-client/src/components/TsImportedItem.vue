@@ -23,23 +23,6 @@
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
   import ImportsInfoService from '@/services/ImportsInfoSercice'
   export default {
-    data () {
-      return {
-        items: []
-      }
-    },
-    components: {
-      FontAwesomeIcon
-    },
-    mounted () {
-      this.getImportsInfo()
-    },
-    methods: {
-      async getImportsInfo () {
-        const response = await ImportsInfoService.fetchImportsInfo()
-        this.items = response.data
-      }
-    },
     props: ['item']
   }
 </script>
