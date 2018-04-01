@@ -1,14 +1,24 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TsAdmin from '@/components/TsAdmin'
+import TsSchedule from '@/components/TsSchedule'
+import TsStops from '@/components/TsStops'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'TsAdmin',
-      component: TsAdmin
+      redirect: '/admin/schedule'
+    },
+    {
+      path: '/admin/schedule',
+      name: 'TsSchedule',
+      component: TsSchedule
+    },
+    {
+      path: '/admin/stops',
+      name: 'TsStops',
+      component: TsStops
     }
   ]
 })

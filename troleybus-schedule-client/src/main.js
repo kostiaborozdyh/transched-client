@@ -17,7 +17,6 @@ import '@fortawesome/fontawesome-free-regular'
 import * as VueGoogleMaps from 'vue2-google-maps';
 
 import ScheduleTable from '@/components/ScheduleTable'
-import TsImportedItems from '@/components/TsImportedItems'
 import GoogleMap from '@/components/ScheduleGoogleMap'
 
 Vue.use(VueGoogleMaps, {
@@ -30,7 +29,6 @@ Vue.use(VueGoogleMaps, {
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 Vue.component('schedule-table', ScheduleTable)
-Vue.component('admin-buttons', TsImportedItems)
 Vue.component('google-map', GoogleMap)
 
 new Vue({
