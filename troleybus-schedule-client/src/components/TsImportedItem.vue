@@ -10,7 +10,7 @@
       <span>маршрутів</span>
     </div>
     <div class="col-3 text-right">
-      <b-badge v-bind:variant="">{{item.state}}</b-badge>
+      <b-badge v-bind:variant="statusBadgeVariantType">{{item.state}}</b-badge>
       <a href="#">
         <font-awesome-icon :icon="['fas', 'trash']" class="text-danger"/>
       </a>
@@ -43,3 +43,5 @@
     }
   }
 </script>
+<style>
+</style>
