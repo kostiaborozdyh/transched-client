@@ -7,7 +7,6 @@
       <b-tab title="1A: Вулиця Пацаєва - Санаторій Україна">
       </b-tab>
     </b-tabs>
-    <div>{{items}}</div>
   </div>
 </template>
 

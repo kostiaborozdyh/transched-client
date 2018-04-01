@@ -1,7 +1,7 @@
 <template>
   <div class="row p-4">
     <div class="col-6">
-      <div class="row justify-content-end mb-3">
+      <div class="row mb-3">
         <div class="col-3">
           <b-button variant="primary">Імпортувати файл</b-button>
         </div>
