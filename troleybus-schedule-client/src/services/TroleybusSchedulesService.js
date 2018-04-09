@@ -1,8 +1,8 @@
 import Api from '@/services/Api'
 
 export default {
-  fetchTroleybusSchedules () {
-    return Api().get('/troleybusschedule/index')
+  fetchSchedules () {
+    return Api().get('/schedule/index')
   },
   fetchStops () {
     return Api().get('/stop/index')

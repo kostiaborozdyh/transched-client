@@ -1,10 +1,12 @@
 <template>
   <div>
     <b-tabs>
-      <b-tab title="1: Санаторій Україна - Аврора" active>
-        <b-table responsive :items="items"></b-table>
-      </b-tab>
-      <b-tab title="1A: Вулиця Пацаєва - Санаторій Україна">
+      <b-tab v-for="schedule in schedules" :key="schedule.id" :title="schedule.title">
+        <div class="row">
+          <div class="col-3">
+            <schedule-directions :items="schedule.directions"></schedule-directions>
+          </div>
+        </div>
       </b-tab>
     </b-tabs>
   </div>
@@ -12,11 +14,13 @@
 
 <script>
   import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
+  import ScheduleDirections from './ScheduleDirections'
 
   export default {
+    components: {ScheduleDirections: ScheduleDirections},
     data () {
       return {
-        items: []
+        schedules: []
       }
     },
     mounted () {
@@ -24,8 +28,8 @@
     },
     methods: {
       async getTroleybusSchedules () {
-        const response = await TroleybusSchedulesService.fetchTroleybusSchedules()
-        this.items = response.data
+        const response = await TroleybusSchedulesService.fetchSchedules()
+        this.schedules = response.data
       }
     }
   }
