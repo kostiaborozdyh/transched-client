@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div class="col-2">{{item.version}}</div>
+  <div class="row selected" v-bind:class="{'selected' : isSelected}">
+    <div class="col-2"><b-list-group-item  button href="#">{{item.version}}</b-list-group-item></div>
     <div class="col-8">
       <span class="pr-1">
         <font-awesome-icon :icon="['fas', 'file-excel']" class="text-success"/>
@@ -28,7 +28,7 @@
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
   export default {
-    props: ['item'],
+    props: ['item, isSelected'],
     components: {
       FontAwesomeIcon
     },
@@ -45,4 +45,7 @@
   }
 </script>
 <style>
+  .selected {
+    background-color: Lime
+  }
 </style>
