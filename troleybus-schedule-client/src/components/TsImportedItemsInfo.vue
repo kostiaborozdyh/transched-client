@@ -16,9 +16,9 @@
   export default {
     name: 'TsImportedItemsInfo',
     data () {
-      "selectedItemId: '5ab878b63fc038833137a051'"
       return {
-        items: []
+        items: [],
+        selectedItemId: '5ab878b63fc038833137a051'
       }
     },
     components: {
