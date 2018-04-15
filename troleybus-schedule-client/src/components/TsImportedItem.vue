@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row" v-bind:class="{'selected' : isSelected}">
     <div class="col-2">{{item.version}}</div>
     <div class="col-8">
       <span class="pr-1">
@@ -28,7 +28,7 @@
   import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
   export default {
-    props: ['item'],
+    props: ['item', 'isSelected'],
     components: {
       FontAwesomeIcon
     },
@@ -45,4 +45,7 @@
   }
 </script>
 <style>
+  .selected {
+    background-color:#00FF00
+  }
 </style>

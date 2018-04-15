@@ -6,7 +6,9 @@
           <b-button variant="outline-success">Імпортувати файл</b-button>
         </div>
       </div>
-      <imported-item v-for="item in items" v-bind:key="item.id" v-bind:item="item"></imported-item>
+      <imported-item  v-for="item in items"   v-bind:key="item.id" v-bind:item="item"
+                      v-bind:isSelected="selectedItemId === item.id"
+                      v-on:click.native="selectItem(item.id) "  ></imported-item>
     </div>
   </div>
 </template>
@@ -17,7 +19,8 @@
     name: 'TsImportedItemsInfo',
     data () {
       return {
-        items: []
+        items: [],
+        selectedItemId: ''
       }
     },
     components: {
@@ -27,6 +30,9 @@
       this.getImportsInfo()
     },
     methods: {
+      selectItem: function (id) {
+        this.selectedItemId = id
+      },
       async getImportsInfo () {
         const response = await ImportsInfoService.fetchImportsInfo()
         this.items = response.data
