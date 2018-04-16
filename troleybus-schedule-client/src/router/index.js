@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TsSchedule from '@/components/TsSchedule'
-import TsStops from '@/components/TsStops'
+import ScheduleMain from '@/components/Schedule/Schedule'
+import Stops from '@/components/Stops/Stops'
 Vue.use(Router)
 
 export default new Router({
@@ -12,13 +12,13 @@ export default new Router({
     },
     {
       path: '/admin/schedule',
-      name: 'TsSchedule',
-      component: TsSchedule
+      name: 'Schedule',
+      component: ScheduleMain
     },
     {
       path: '/admin/stops',
-      name: 'TsStops',
-      component: TsStops
+      name: 'Stops',
+      component: Stops
     }
   ]
 })

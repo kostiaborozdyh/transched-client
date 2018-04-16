@@ -16,8 +16,8 @@ import '@fortawesome/fontawesome-free-regular'
 
 import * as VueGoogleMaps from 'vue2-google-maps';
 
-import ScheduleTable from '@/components/ScheduleTable'
-import GoogleMap from '@/components/ScheduleGoogleMap'
+import ScheduleTable from '@/components/Schedule/Schedules'
+import GoogleMap from '@/components/GoogleMap'
 
 Vue.use(VueGoogleMaps, {
   load: {

@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-  import TsImportedItem from '@/components/TsImportedItem'
+  import ImportedItem from '@/components/Schedule/ImportedItem'
   import ImportsInfoService from '@/services/ImportsInfoSercice'
   export default {
     name: 'TsImportedItemsInfo',
@@ -24,7 +24,7 @@
       }
     },
     components: {
-      'imported-item': TsImportedItem
+      'imported-item': ImportedItem
     },
     mounted () {
       this.getImportsInfo()

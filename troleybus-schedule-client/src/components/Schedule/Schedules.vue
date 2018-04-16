@@ -14,10 +14,10 @@
 
 <script>
   import TroleybusSchedulesService from '@/services/TroleybusSchedulesService'
-  import ScheduleDirections from './ScheduleDirections'
+  import Directions from './Directions'
 
   export default {
-    components: {ScheduleDirections: ScheduleDirections},
+    components: {ScheduleDirections: Directions},
     data () {
       return {
         schedules: []
@@ -34,9 +34,3 @@
     }
   }
 </script>
-
-<style>
-  .nav {
-    margin-top: 30px;
-  }
-</style>

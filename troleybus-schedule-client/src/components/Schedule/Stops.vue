@@ -17,11 +17,11 @@
         fields: [
           {
             key: 'stop.title',
-            label: 'Зупинка'
+            label: ''
           },
           {
             key: 'time',
-            label: 'Час'
+            label: ''
           }
         ],
         currentStopsPage: 1
