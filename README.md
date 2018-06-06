@@ -1,4 +1,4 @@
-# Trolleybus-Schedue
+# Transport-Schedue
 
 The main target of this project is to manage and view the schedule of public transport.
 
