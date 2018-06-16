@@ -1,6 +1,6 @@
-# troleybus-schedule-client
+# transched-client
 
-> Client side of the Troleybus Schedule module
+Client side of the Transport Schedule project
 
 ## Build Setup
 
