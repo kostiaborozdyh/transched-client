@@ -1,43 +1,30 @@
-# Transport-Schedue
+# troleybus-schedule-client
 
-The main target of this project is to manage and view the schedule of public transport.
+> Client side of the Troleybus Schedule module
 
-## System requirements
+## Build Setup
 
-node.js v8.9.x, npm v5.8.x, nodemon
+``` bash
+# install dependencies
+npm install
 
-## How to run
+# serve with hot reload at localhost:8080
+npm run dev
 
-1. Install node.js and npm. 
-1. Install nodemon as system package: `npm install -g nodemon`
-1. In terminal session go to the `troleybus-schedule-client` 
-1. Execute `npm install` command
-1. Execute `npm run <environment>` command (for example `npm run dev` for development environment)
-1. Leave terminal opened 
-1. Open the separated terminal session
-1. Go to the `troleybus-schedule-server`
-1. Execute `npm install` command
-1. Execute `npm start` command
+# build for production with minification
+npm run build
 
-You can open the client part using the `http://localhost:8080` link and server part using the
-`http://localhost:8081` link. Client part works with the server using http requests through services.
+# build for production and view the bundle analyzer report
+npm run build --report
 
-## How to participate
+# run unit tests
+npm run unit
 
-### As a collaborator
+# run e2e tests
+npm run e2e
 
-1. Ask repository owner to add you as collaborator into the repository
-1. Clone repo
-1. Create your own branch
-1. Implement functionality
-1. Create pull-request into the `master`
+# run all tests
+npm test
+```
 
-### As a GitHub user
-
-1. Make fork of this repository
-1. Implement changes
-1. Create a pull-requiest into appropriate branch (usually `master`)
-
-### Where to get tasks which needs to be implemented
-
-Go to the issues of this repository. It is the single place where all tasks are collected.
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
